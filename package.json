@@ -2,7 +2,7 @@
   "name": "snmv",
   "version": "1.0.0",
   "description": "A project in which a web app of the school is built by its fellows.",
-  "main": "server.js",
+  "main": "./server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/saraswatiNiketan-Website/SNMV/issues"
   },
-  "homepage": "https://github.com/saraswatiNiketan-Website/SNMV#readme"
+  "homepage": "https://github.com/saraswatiNiketan-Website/SNMV#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
 }
