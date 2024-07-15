@@ -1,0 +1,22 @@
+{
+  "name": "snmv",
+  "version": "1.0.0",
+  "description": "A project in which a web app of the school is built by its fellows.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saraswatiNiketan-Website/SNMV.git"
+  },
+  "keywords": [
+    "school"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saraswatiNiketan-Website/SNMV/issues"
+  },
+  "homepage": "https://github.com/saraswatiNiketan-Website/SNMV#readme"
+}
