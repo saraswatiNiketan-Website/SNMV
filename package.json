@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/saraswatiNiketan-Website/SNMV/issues"
   },
-  "homepage": "https://github.com/saraswatiNiketan-Website/SNMV#readme"
+  "homepage": "https://github.com/saraswatiNiketan-Website/SNMV#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
 }
