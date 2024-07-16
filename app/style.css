@@ -1,0 +1,226 @@
+body,html{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+.logo_img{
+    position: relative;
+    padding: auto;
+    margin: auto;
+}
+
+.Section_top{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: change 30s infinite ease-in ;
+}
+@keyframes change{
+    0%
+    {
+        background-image: url(img-1.jpg);
+    }
+    20%
+    {
+        background-image: url(img-2.jpg);
+    }
+    40%
+    {
+        background-image: url(img-1.jpg);
+    }
+    60%
+    {
+        background-image: url(img-2.jpg);
+    }
+    80%
+    {
+        background-image: url(img-1.jpg);
+    }
+    100%
+    {
+        background-image: url(img-2.jpg);
+    }
+}
+
+div{
+    display: block;
+    unicode-bidi: isolate;
+
+    /* About Section */
+}
+ .column img{
+    border-radius: 3.5rem;
+ }
+.row{
+    display: flex;
+
+}
+.column{
+    flex: 50%;
+    padding: 10px;
+}
+
+.heading-title{
+    padding: 2vh;
+    margin: auto;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.event-content{
+    padding: 0 1rem;
+}
+
+.link-btn{
+  display: block;
+  font-size: 1.8rem;
+  font-family: poppiness;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+
+/* student life */
+
+
+
+#stu-life{
+    font-family: Arial, sans-serif;
+    background-color: #FFA500; 
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+.header {
+    color: #231111;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+  }
+  .gallery img {
+    border-radius: 10px; /* Rounded corners for images */
+    width: calc(33% - 10px);
+    margin-right: 15px; /* Space between images */
+  }
+  .gallery img:last-child {
+    margin-right: 0; /* No space after last image */
+  }
+  .info-text {
+    color: #010101;
+    font-size: 1em;
+    margin-top: 20px;
+  }
+  .more-info {
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+  }
+
+
+  /* History and vision */
+
+  #history-vision{
+    background-color: #ac9c9c;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+  }
+  .box{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 450px;
+    border: 2px solid black;
+    margin: 10px;
+    align-items: center;
+    text-align: justify;
+    padding: 10px;
+    border-radius: 15px;
+    background: linear-gradient(to top, #00266d 50%, white);
+    background-size: 100% 200%;
+    transition: all 3s; 
+  }
+  .box:hover{
+    /* color: #fff; */
+    background-position: left bottom;
+    border: 0.1rem solid black;
+    box-shadow: 0 1 20px rgb(134, 47, 47);
+  }
+  .box-heading{
+    font-weight: 700;
+    font-size: 2rem;
+  }
+  .box-size{
+    margin-right: 10rem;
+    padding-block: 3rem;
+  }
+
+  a{
+    text-decoration: none;
+    color: #010101;
+  }
+  .heading a:hover{
+    color: #00266d;
+    transition: color 0.3s;
+    cursor: pointer;        
+  }
+
+  /* news and events */
+  .news-events-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+  }
+  .news-event-block {
+    width: calc(33% - 10px);
+    margin-right: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .news-event-block img {
+    width: 100%;
+    height: auto;
+  }
+  .news-event-block {
+    padding: 15px;
+  }
+  
+  .news-event-block {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .news-event-block {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .view-all-btn {
+    display: block;
+    font-size: 1.8rem;
+    font-family: poppiness;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
