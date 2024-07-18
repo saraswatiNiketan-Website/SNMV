@@ -1,0 +1,78 @@
+:root{
+    --primary-action-color: #fcba63;
+    --primary-text-color: #3d53a0;
+    --primary-background-color: #3d53a0;
+}
+
+
+body{
+    background: var(--primary-background-color);
+    /* scroll-behavior: none; */
+    overflow: hidden;
+}
+
+main{
+    background-image: url("./../pictures/logo_saraswati-niketan.png");
+    background-size: 46rem;
+    background-position: center ;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+    
+}
+
+form{
+    width: fit-content;
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 5%;
+    align-items: center; 
+
+    /* glassmorphism */
+    background: rgba( 255, 255, 255, 0.4 );
+box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.407);
+backdrop-filter: blur( 6px );
+-webkit-backdrop-filter: blur( 6px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+form input{
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+form>*{
+    margin: 0.2rem;
+}
+
+h1{
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    /* color: var(--primary-text-color); */
+
+}
+
+.buttons{
+    margin-top: 1rem;
+
+
+    /* background: #000000; */
+}
+
+
+button{
+    border: 1px solid black;
+    padding: 0.3rem 0.5rem;
+    border-radius: 1rem;
+    /* color: var(--primary-background-color); */
+    background: var(--primary-action-color);
+    /* color: var(--primary-text-color); */
+}
