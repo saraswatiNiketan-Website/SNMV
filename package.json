@@ -4,7 +4,10 @@
   "description": "A project in which a web app of the school is built by its fellows.",
   "main": "./server/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init": "knex init",
+    "make:migration": "knex migrate:make ",
+    "migrate": "knex migrate:latest "
   },
   "repository": {
     "type": "git",
@@ -20,6 +23,8 @@
   },
   "homepage": "https://github.com/saraswatiNiketan-Website/SNMV#readme",
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "knex": "^3.1.0",
+    "pg": "^8.12.0"
   }
 }
