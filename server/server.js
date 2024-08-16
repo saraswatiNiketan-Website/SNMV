@@ -16,6 +16,11 @@ app.post('/postevents', async function (req, res){
 const a = await req.body;
 
     console.log(a)  
+    // console.log(req)
+    // for (const entry of a) {
+    //     console.log(entry);
+    //     console.log("hi")
+    //   }
 
 //     const request = await req.body;
 // console.log(request)
