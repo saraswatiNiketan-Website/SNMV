@@ -1,14 +1,15 @@
 // Update with your config settings.
+require('dotenv').config();
 
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 module.exports = {
-    client: 'postgres',
+    client: process.env.DB_CLIENT,
     connection: {
-      database: 'Project1',
-      user:     'postgres',
-      password: 'pranish'
+      database: process.env.DB_NAME,
+      user:     process.env.DB_USER,
+      password: process.env.DB_PASSWORD
     },
     pool: {
       min: 2,
@@ -18,5 +19,5 @@ module.exports = {
       tableName: 'knex_migrations'
     }
   
-
 };
+// console.log(process.env.DB_CLIENT)
