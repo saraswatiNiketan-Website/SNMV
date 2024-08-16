@@ -1,0 +1,181 @@
+.menu-container {
+    position: fixed;
+    top: 1rem;
+    right: 0.9rem;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    width: 200px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    transition:right .3s ease;
+    font-weight: 600;
+}
+
+.menu-container:hover {
+    background-color: #aaff55;
+}
+
+.menu-btn {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #aaff55;
+}
+
+.menu-container:hover .menu-btn {
+    color: black;
+}
+
+/* Navigation styles */
+.nav {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Initially off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #f6f6ee;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 1;
+    transition: right 0.3s ease;
+    padding: 5px;
+}
+
+.nav.open {
+    right: 0; /* Slide in when open */
+}
+
+.nav-link {
+    margin-left: 2pc;
+    margin-top: 1pc;
+    display: block;
+    color: #000000;
+    padding: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+}
+.nav-link.active {
+    color: gold;
+}
+.login-button {
+    margin-left: 2pc;
+    background-color: #FFA500;
+    width: 10pc;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    transition: color 0.3s;
+    border-radius:12px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+.login-button:hover {
+    margin-left: 2pc;
+    background-color: darkblue;
+    width: 10pc;
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    transition: color 0.3s;
+    border-radius:12px;
+    
+}
+
+.plus-icon {
+    position: absolute;
+    right: -8pc;
+    bottom: 10px;
+    width: 20px;
+    height: 20px;
+    color: white;
+    background-color: black;
+    font-size: 1.2rem; 
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.close-btn {
+    display: flex;
+    position: absolute;
+    right: 1.2rem;
+    width: 40px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #333;
+    transition: color 0.4s ease; /* Smooth color transition */
+    background-color: #f6f6ee;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    color: red;
+    background-color: black;
+}
+
+.container1,
+.container2 {
+    position: fixed;
+    top: 5rem; /* Adjusted top position */
+    right: 0.9rem;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    width: 200px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 10px 0 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    transition: right 0.3s ease;
+}
+
+.container2 {
+    top: 9rem; /* Adjusted top position */
+}
+
+.container1:hover,
+.container2:hover {
+    background-color: #aaff55; /* Change background color on hover */
+}
+
+.bell {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #aaff55; /* Initial color */
+    text-decoration: none;
+}
+
+.container1:hover .bell,
+.container2:hover .bell {
+    color: black; /* Change color on hover */
+}
+
+.bell-label {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
