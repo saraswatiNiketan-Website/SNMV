@@ -1,8 +1,35 @@
+const baseUrl = 'http://localhost:3001'
+
 const express = require('express');
 const cors = require('cors');
+
 const app = express();
 
+app.use(cors());
+app.use(express.json());
+
 const {db} = require('./database');
+
+
+app.post('/postevents', async function (req, res){
+
+const a = await req.body;
+
+    console.log(a)  
+
+//     const request = await req.body;
+// console.log(request)
+
+// const q = req.query;
+// console.log(q)
+
+}
+);
+
+
+
+
+
 
 // const loggedInUsers = [{
 //     id: "9"
@@ -41,8 +68,8 @@ const {db} = require('./database');
 
 
 
-app.listen(3000, ()=>{
-    console.log('Server is running on port 3000');
+app.listen(3001, ()=>{
+    console.log('Server is running on port 3001');
 })
 
 

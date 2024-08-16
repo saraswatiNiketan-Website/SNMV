@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>User Input Form</title>
+</head>
+
+<body>
+  <h1>Enter Your Content</h1>
+  <label for="title">Title:</label>
+  <input type="text" id="title" name="title">
+  <br>
+  <label for="paragraph">Paragraph:</label>
+  <textarea id="paragraph" name="paragraph"></textarea>
+  <br>
+  <label for="image1">Image 1:</label>
+  <input type="file" id="image1" name="image1" accept="image/*">
+  <br>
+  <label for="image2">Image 2:</label>
+  <input type="file" id="image2" name="image2" accept="image/*">
+  <br>
+  <label for="image3">Image 3:</label>
+  <input type="file" id="image3" name="image3" accept="image/*">
+  <br>
+  <label for="image4">Image 4:</label>
+  <input type="file" id="image4" name="image4" accept="image/*">
+  <br>
+  <button onclick="submitContent()">Submit</button>
+  <div id="output"></div>
+
+  <script src="./../scripts/adminDashboard.js"></script>
+</body>
+
+</html>
