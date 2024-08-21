@@ -1,0 +1,127 @@
+ body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f9f9f9;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+ }
+ 
+ .container {
+     width: 100%;
+     max-width: 600px;
+     /* margin: auto auto; */
+     padding: 1rem;
+     background-color: #fff;
+     border: 1px solid #ddd;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     border-radius: 10px;
+
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .container>*{
+     width: calc(100% - 2rem);
+ }
+ 
+ .update-container {
+     margin-bottom: 20px;
+ }
+ 
+ h1 {
+     text-align: center;
+     margin-bottom: 10px;
+ }
+ 
+ h2 {
+     margin-top: 0;
+     font-weight: bold;
+     color: #333;
+ }
+ 
+ form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+ 
+ label {
+     margin-bottom: 10px;
+     font-weight: bold;
+     color: #333;
+ }
+ 
+ input, textarea {
+     width: 100%;
+     padding: 10px;
+     font-size: 16px;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+     margin-bottom: 20px;
+ }
+
+#submit-btn {
+background-color: #4CAF50;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+
+/* max-width: 8rem; */
+align-self: center;
+}
+
+#submit-btn:hover {
+background-color: #3e8e41;
+}
+
+
+
+ /* #notice-list {
+     margin-top: 20px;
+     padding: 20px;
+     background-color: #f9f9f9;
+     border: 1px solid #ccc;
+     border-radius: 10px;
+ } */
+ 
+ /* Responsive design for mobile devices */
+ @media only screen and (max-width: 768px) {
+     .container {
+         max-width: 90%;
+         margin: 20px auto;
+         padding: 10px;
+     }
+ 
+     input, textarea {
+         font-size: 14px;
+     }
+ 
+     button[type="submit"] {
+         padding: 5px 10px;
+         font-size: 12px;
+     }
+ }
+ 
+ @media only screen and (max-width: 480px) {
+     .container {
+         max-width: 95%;
+         margin: 10px auto;
+         padding: 5px;
+     }
+ 
+     input, textarea {
+         font-size: 12px;
+     }
+ 
+     button[type="submit"] {
+         padding: 3px 5px;
+         font-size: 10px;
+     }
+ }
