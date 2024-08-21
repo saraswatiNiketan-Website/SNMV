@@ -5,6 +5,7 @@
   --bg-color: #f1f1fb;
   --holiday-color: red;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -18,6 +19,7 @@ body {
   width: 100%;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -131,3 +133,43 @@ body {
 .days>div:nth-child(7n){
   color: red;
 }
+
+
+
+
+.selectedEvent{
+  /* height: 10vh; */
+  background: rgb(0, 255, 0);
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem;
+  color: red;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+  
+  display: none;
+}
+
+.selectedDay{
+  display: inline;
+  /* margin: 1rem; */
+  padding: 2rem;
+  background: var(--primary-color);
+  /* transform: scale(1.05); */
+  /* font-weight: bold; */
+}
+
+.eventInfo{
+  background-color: blue;
+  width: calc(100% - 5rem);
+  padding: 1rem;
+}
+
+/* .eventDate{
+
+}
+
+.eventTitle{
+  
+} */
