@@ -4,14 +4,18 @@ function submitContent() {
 
     console.log("submitContent");
 
-    sendDataAndFile(document.getElementById("title").value,
-        document.getElementById("paragraph").value,
+    const imageInput = document.getElementById("image-input")
+    sendDataAndFile(document.getElementById("topic-title").value,
+        document.getElementById("topic-input").value,
+        imageInput.files[0],
+        imageInput.files[1],
+        imageInput.files[2],
+        imageInput.files[3],
         // document.getElementById("paragraph").value,
-        document.getElementById("image1").files[0],
-        document.getElementById("image2").files[0],
-        document.getElementById("image3").files[0],
-        document.getElementById("image4").files[0]);
-
+        // document.getElementById("image2").files[0],
+        // document.getElementById("image3").files[0],
+        // document.getElementById("image4").files[0]);
+    )
 }
 
 async function sendDataAndFile(title, paragraph, image1, image2, image3, image4) {
@@ -37,12 +41,7 @@ async function sendDataAndFile(title, paragraph, image1, image2, image3, image4)
     try {
         const response = await fetch('http://localhost:3001/postevents', {
             method: 'POST',
-            headers: {
-                // contentType: 'multipart/form-data',
-                'Content-Type': 'multipart/form-data'
-            },
-            body: JSON.stringify(formData)
-            // body: JSON.stringify({ a,b })
+            body: formData,
         });
 
         if (!response.ok) {

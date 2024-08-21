@@ -6,7 +6,7 @@
 </head>
 
 <body>
-  <h1>Enter Your Content</h1>
+  <!-- <h1>Enter Your Content</h1>
   <label for="title">Title:</label>
   <input type="text" id="title" name="title">
   <br>
@@ -25,8 +25,521 @@
   <label for="image4">Image 4:</label>
   <input type="file" id="image4" name="image4" accept="image/*">
   <br>
-  <button onclick="submitContent()">Submit</button>
-  <div id="output"></div>
+  <button onclick="submitContent()">Submit</button> -->
+
+
+
+
+
+  
+
+  <!-- /* From Uiverse.io by G4b413l */  -->
+  <!-- <div class="group">
+    <input required="" type="text" class="input">
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label class="title-label">Title for the post....</label>
+  </div>
+  <style>
+    /* From Uiverse.io by G4b413l */ 
+.group {
+ position: relative;
+}
+
+.input {
+ font-size: 16px;
+ padding: 10px 10px 10px 5px;
+ display: block;
+ width: 200px;
+ border: none;
+ border-bottom: 1px solid #515151;
+ background: transparent;
+}
+
+.input:focus {
+ outline: none;
+}
+
+.title-label {
+ color: #999;
+ font-size: 18px;
+ font-weight: normal;
+ position: absolute;
+ pointer-events: none;
+ left: 5px;
+ top: 10px;
+ transition: 0.2s ease all;
+ -moz-transition: 0.2s ease all;
+ -webkit-transition: 0.2s ease all;
+}
+
+.input:focus ~ label, .input:valid ~ label {
+ top: -20px;
+ font-size: 14px;
+ color: #5264AE;
+}
+
+.bar {
+ position: relative;
+ display: block;
+ width: 200px;
+}
+
+.bar:before, .bar:after {
+ content: '';
+ height: 2px;
+ width: 0;
+ bottom: 1px;
+ position: absolute;
+ background: #5264AE;
+ transition: 0.2s ease all;
+ -moz-transition: 0.2s ease all;
+ -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+ left: 50%;
+}
+
+.bar:after {
+ right: 50%;
+}
+
+.input:focus ~ .bar:before, .input:focus ~ .bar:after {
+ width: 50%;
+}
+
+.highlight {
+ position: absolute;
+ height: 60%;
+ width: 100px;
+ top: 25%;
+ left: 0;
+ pointer-events: none;
+ opacity: 0.5;
+}
+
+.input:focus ~ .highlight {
+ animation: inputHighlighter 0.3s ease;
+}
+
+@keyframes inputHighlighter {
+ from {
+  background: #5264AE;
+ }
+
+ to {
+  width: 0;
+  background: transparent;
+ }
+}
+
+  </style> -->
+
+
+
+
+<!-- <div class="topic-input-container">
+  <label for="topic-input">Tell us about a topic:</label>
+  <textarea id="topic-input" name="topic-input" rows="10" cols="50" placeholder="Enter your thoughts about the topic..."></textarea>
+  <button id="submit-btn">Submit</button>
+</div> -->
+
+<!-- <style>
+  .topic-input-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.topic-input-container label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+#topic-input {
+  width: calc(100% - 2rem);
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  resize: vertical;
+}
+
+#submit-btn {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background-color: #3e8e41;
+}
+
+/* #response-container {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+} */
+</style> -->
+
+<!-- <script>
+  const topicInput = document.getElementById('topic-input');
+const submitBtn = document.getElementById('submit-btn');
+const responseContainer = document.getElementById('response-container');
+
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const userInput = topicInput.value.trim();
+  if (userInput !== '') {
+    // You can send the user input to your server or perform any other action here
+    responseContainer.innerHTML = `Thank you for sharing your thoughts about the topic! Your input was: <br><br>${userInput}`;
+  } else {
+    responseContainer.innerHTML = 'Please enter some text about the topic.';
+  }
+});
+</script> -->
+
+
+
+
+
+
+
+
+
+
+<h1>
+  <!-- Create a Topic Post with Images -->
+   Add Your Event
+</h1>
+
+<!-- HTML -->
+<div class="topic-input-container">
+  <label for="topic-title">Topic Title:</label>
+  <input type="text" id="topic-title" name="topic-title" placeholder="Enter topic title...">
+  <label for="topic-input">Tell us about a topic:</label>
+  <textarea id="topic-input" name="topic-input" rows="10" cols="50" placeholder="Enter your thoughts about the topic..."></textarea>
+  <label for="image-upload">Upload Images (max 4):</label>
+  <div id="image-upload" class="image-upload-container">
+    <input type="file" id="image-input" name="image-input" multiple>
+    <label for="image-input">
+      <i class="fas fa-upload"></i>
+      Drag and drop or browse for images (Currently browsing images is only supported)
+    </label>
+    <div id="image-preview" class="image-preview-container"></div>
+  </div>
+  <button id="submit-btn">Submit</button>
+  <!-- <div id="response-container" class="output"></div> -->
+</div>
+
+<!-- CSS -->
+ <style>
+
+  h1{
+    text-align: center;
+    /* display: ; */
+    margin: 0;
+  }
+  
+
+  .topic-input-container {
+max-width: 600px;
+margin: 2rem auto 0 auto;
+padding: 1rem;
+background-color: #f9f9f9;
+border: 1px solid #ccc;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+
+
+display: flex;
+flex-direction: column;
+/* align-items: center; */
+}
+
+.topic-input-container label {
+display: block;
+margin-bottom: 10px;
+font-weight: bold;
+color: #333;
+}
+
+#topic-title {
+width: calc(100% - 2rem);
+padding: 10px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 10px;
+margin-bottom: 20px;
+}
+
+#topic-input {
+width: calc(100% - 2rem);
+padding: 10px;
+
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 10px;
+resize: vertical;
+}
+
+.image-upload-container {
+margin-bottom: 20px;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 10px;
+background-color: #f9f9f9;
+}
+
+.image-upload-container input[type="file"] {
+display: none;
+}
+
+.image-upload-container label {
+display: block;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 10px;
+cursor: pointer;
+/* margin-top: 1rem; */
+}
+
+label[for = "image-upload"] {
+  margin-top: 1rem;
+}
+
+.image-upload-container label:hover {
+background-color: #f0f0f0;
+}
+
+.image-preview-container {
+margin-top: 10px;
+}
+
+.image-preview-container img {
+width: 100px;
+height: 100px;
+margin: 10px;
+border: 1px solid #ccc;
+border-radius: 10px;
+}
+
+#submit-btn {
+background-color: #4CAF50;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+
+/* max-width: 8rem; */
+align-self: center;
+}
+
+#submit-btn:hover {
+background-color: #3e8e41;
+}
+
+@media only screen and (max-width: 768px) {
+    .topic-input-container {
+      max-width: 90%;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    #topic-title, #topic-input {
+      /* width: calc(100% - 2rem); */
+      padding: 10px;
+      font-size: 14px;
+    }
+
+    .image-upload-container {
+      margin-bottom: 10px;
+    }
+
+    .image-upload-container label {
+      padding: 5px;
+      font-size: 12px;
+    }
+
+    .image-preview-container img {
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+    }
+
+    #submit-btn {
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+  }
+
+  @media only screen and (max-width: 480px) {
+    .topic-input-container {
+      max-width: 95%;
+      margin: 1rem auto;
+      padding: 0.5rem;
+    }
+
+    #topic-title, #topic-input {
+      font-size: 12px;
+    }
+
+    .image-upload-container label {
+      padding: 3px;
+      font-size: 10px;
+    }
+
+    .image-preview-container img {
+      width: 30px;
+      height: 30px;
+      margin: 3px;
+    }
+
+    #submit-btn {
+      padding: 3px 5px;
+      font-size: 10px;
+    }
+  }
+
+/*.output {
+margin-top: 20px;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 10px;
+background-color: #f9f9f9;
+font-size: 18px;
+font-weight: bold;
+color: #333;
+}*/
+/* .image-upload-container {
+  margin-bottom: 20px;
+}
+
+.image-upload-container input[type="file"] {
+  display: none;
+}
+
+.image-upload-container label {
+  display: block;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.image-upload-container label:hover {
+  background-color: #f0f0f0;
+}
+
+.image-preview-container {
+  margin-top: 10px;
+}
+
+.image-preview-container img {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+} */
+</style>
+
+<!-- JS -->
+ <script>
+  
+const topicTitleInput = document.getElementById('topic-title');
+const topicInput = document.getElementById('topic-input');
+const imageInput = document.getElementById('image-input');
+const imagePreviewContainer = document.getElementById('image-preview');
+const submitBtn = document.getElementById('submit-btn');
+// const responseContainer = document.getElementById('response-container');
+
+let uploadedImages = [];
+
+imageInput.addEventListener('change', (e) => {
+  const files = imageInput.files;
+  if (files.length > 4) {
+    alert('You can only upload up to 4 images.');
+    return;
+  }
+  uploadedImages = [];
+  imagePreviewContainer.innerHTML = '';
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const img = document.createElement('img');
+      img.src = event.target.result;
+      imagePreviewContainer.appendChild(img);
+      uploadedImages.push(file);
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const topicTitle = topicTitleInput.value.trim();
+  const userInput = topicInput.value.trim();
+  if (topicTitle !== '' && userInput !== '' && uploadedImages.length > 0) {
+    // You can send the user input and uploaded images to your server or perform any other action here
+    submitContent()
+    // responseContainer.innerHTML = `Thank you for sharing your thoughts about <strong>${topicTitle}</strong>! Your input was: <br><br>${userInput}<br><br>Uploaded Images:`;
+    // for (let i = 0; i < uploadedImages.length; i++) {
+    //   const img = document.createElement('img');
+    //   img.src = URL.createObjectURL(uploadedImages[i]);
+    //   responseContainer.appendChild(img);
+    // }
+  } else {
+    console.log("enter all fields")
+    // responseContainer.innerHTML = 'Please enter topic title, description, and upload at least one image.';
+  }
+});
+</script>
+
+
+<script src="../scripts/adminDashboard.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <script src="./../scripts/adminDashboard.js"></script>
 </body>
