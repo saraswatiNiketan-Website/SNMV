@@ -1,0 +1,319 @@
+<!-- HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Board</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Notice Board</h1>
+        <form id="notice-form">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Enter subject of the notice">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" placeholder="Enter description of the notice"></textarea>
+            <button id="submit-btn">Submit</button>
+        </form>
+        <div id="notice-list"></div>
+    </div>
+    
+     <style>
+    
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    label {
+        margin-bottom: 10px;
+    }
+    
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    
+    button[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    
+    button[type="submit"]:hover {
+        background-color: #3e8e41;
+    }
+    
+    #notice-list {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+    
+    /* Responsive design for mobile devices */
+    @media only screen and (max-width: 768px) {
+        .container {
+            max-width: 90%;
+            margin: 20px auto;
+            padding: 10px;
+        }
+    
+        input, textarea {
+            font-size: 14px;
+        }
+    
+        button[type="submit"] {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+    }
+    
+    @media only screen and (max-width: 480px) {
+        .container {
+            max-width: 95%;
+            margin: 10px auto;
+            padding: 5px;
+        }
+    
+        input, textarea {
+            font-size: 12px;
+        }
+    
+        button[type="submit"] {
+            padding: 3px 5px;
+            font-size: 10px;
+        }
+    }
+    </style>
+    
+     <script>
+    
+    const noticeForm = document.getElementById('notice-form');
+    const noticeList = document.getElementById('notice-list');
+    
+    noticeForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const subject = document.getElementById('subject').value.trim();
+        const description = document.getElementById('description').value.trim();
+        if (subject !== '' && description !== '') {
+            const noticeHTML = `
+                <h2>${subject}</h2>
+                <p>${description}</p>
+            `;
+            noticeList.innerHTML += noticeHTML;
+            noticeForm.reset();
+        } else {
+            alert('Please enter both subject and description');
+        }
+        
+    });
+    </script>
+
+</body>
+</html> -->
+
+
+<!-- HTML -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Board</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Notice Board</h1>
+        <div class="update-container">
+            <h5>Any new updates to deliver?</h5>
+            <form id="notice-form">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter subject of the notice">
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" placeholder="Enter description of the notice"></textarea>
+                <button id="submit-btn">Submit</button>
+            </form>
+        </div>
+        <!-- <div id="notice-list"></div> -->
+    </div>
+
+    
+ <style>
+
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 1rem;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container>*{
+        width: calc(100% - 2rem);
+    }
+    
+    .update-container {
+        margin-bottom: 20px;
+    }
+    
+    h1 {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    h2 {
+        margin-top: 0;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    label {
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+#submit-btn {
+background-color: #4CAF50;
+color: #fff;
+padding: 10px 20px;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+
+/* max-width: 8rem; */
+align-self: center;
+}
+
+#submit-btn:hover {
+background-color: #3e8e41;
+}
+
+
+
+    /* #notice-list {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    } */
+    
+    /* Responsive design for mobile devices */
+    @media only screen and (max-width: 768px) {
+        .container {
+            max-width: 90%;
+            margin: 20px auto;
+            padding: 10px;
+        }
+    
+        input, textarea {
+            font-size: 14px;
+        }
+    
+        button[type="submit"] {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+    }
+    
+    @media only screen and (max-width: 480px) {
+        .container {
+            max-width: 95%;
+            margin: 10px auto;
+            padding: 5px;
+        }
+    
+        input, textarea {
+            font-size: 12px;
+        }
+    
+        button[type="submit"] {
+            padding: 3px 5px;
+            font-size: 10px;
+        }
+    }
+    </style>
+    
+    
+     <script>
+    
+    const noticeForm = document.getElementById('notice-form');
+    // const noticeList = document.getElementById('notice-list');
+    
+    noticeForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const subject = document.getElementById('subject').value.trim();
+        const description = document.getElementById('description').value.trim();
+        if (subject !== '' && description !== '') {
+            // const noticeHTML = `
+            //     <h2>${subject}</h2>
+            //     <p>${description}</p>
+            // `;
+            // noticeList.innerHTML += noticeHTML;
+            // noticeForm.reset();
+        } else {
+            alert('Please enter both subject and description');
+        }
+    });
+    </script>
+    
+</body>
+</html>
+

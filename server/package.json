@@ -1,0 +1,36 @@
+{
+  "name": "snmv",
+  "version": "1.0.0",
+  "description": "A project in which a web app of the school is built by its fellows.",
+  "main": "./server/server.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon",
+    "init": "knex init",
+    "make:migration": "knex migrate:make",
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saraswatiNiketan-Website/SNMV.git"
+  },
+  "keywords": [
+    "school"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saraswatiNiketan-Website/SNMV/issues"
+  },
+  "homepage": "https://github.com/saraswatiNiketan-Website/SNMV#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-fileupload": "^1.5.1",
+    "knex": "^3.1.0",
+    "pg": "^8.12.0",
+    "sqlite3": "^5.1.7"
+  }
+}
