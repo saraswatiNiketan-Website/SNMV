@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    /* width: 100%; */
+}
+@media screen and (max-width:665px){
+    :root{
+        scroll-behavior: smooth;
+    }
+} 
+/* @media screen and (max-width: 1000px) {
+    .column-66,
+    .column-33 {
+      width: 100%;
+      text-align: center;
+    } */
+body {
+    overflow-x: hidden;
+    /* width: 80%; */
+    /* background-color:white; */
+    color: blueviolet;
+    font-size: 0.9rem;
+}
+
+.header {
+    background-color: brown;
+    height: 400px;
+    /* width: 1595px; */
+    width: 100vw;
+    border: solid 2px blanchedalmond;
+    /* padding: 10px; */
+    margin: 0%;
+}
+
+.index {
+    background-color: beige;
+    opacity: 70%;
+    left: 3rem;
+    min-width: 15rem;
+    max-width: 23rem;
+    padding: 4rem 3rem 4rem 3rem;
+    box-shadow: 4px 6px 30px darkgreen;
+    border-radius: 30px;
+    top: 29rem;
+    margin-left: 20px;
+    margin-top: 300px;
+
+
+}
+
+.facility {
+    color: #152b71;
+    font-weight: 700;
+    position: relative;
+    font-size: xx-large;
+}
+
+/* Facilitiess part*/
+.head {
+    height: 80%;
+    width: 100%;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+
+
+.container {
+    height: 100%;
+    /* width: 100%; */
+    /* position: relative; */
+    /* display:block; */
+    /* padding: 30px; */
+    padding-top: 10%;
+}
+
+.outer {
+    display: block;
+    margin-top: 5%;
+    border: 2rem;
+    align-items: center;
+    padding-left: 20%;
+    padding-right: 20%;
+
+}
+
+ /* .outer .image-content { 
+     height:450px;
+    width: 900px;
+} */
+
+.image-content .image {
+    border-radius: 30px;
+     height:450px; 
+    width: 900px; 
+    position: relative;
+}
+
+.content h1 {
+    align-items: center;
+    font-size: x-large;
+    color: #152b71;
+    row-gap: 5px;
+}
+
+.content p {
+    color: black;
+    font-size: medium;
+     width: 900px;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    height: 65px;
+    width: 250px;
+    margin-right: 90%;
+    margin-top: 15px;
+    background-color: #a0a6bb;
+    color: burlywood;
+}
+
+.btn:hover {
+    font-size: 16px;
+    border-radius: 20px;
+    color: #152b71;
+    background-color: blanchedalmond;
+    transition: 0.4s ease-in-out;
+    transform: scale(1.1);
+}
