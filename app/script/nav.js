@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             menuContainer.style.right = '15px';
             containers.forEach(container => {
                 container.style.right = '15px';
-            });
+            }); 
         }
     }
 
