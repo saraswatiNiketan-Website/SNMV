@@ -1,6 +1,13 @@
-// const { json } = require("body-parser");
+const topicTitleInput = document.getElementById('topic-title');
+const topicInput = document.getElementById('topic-input');
+const imageInput = document.getElementById('image-input');
+const imagePreviewContainer = document.getElementById('image-preview');
+const submitBtn = document.getElementById('submit-btn');
 
-function submitContent() {
+
+function submitContent(e) {
+
+  // e.preventDefault(); // Prevent form from submitting normally
 
     console.log("submitContent");
 
@@ -11,11 +18,9 @@ function submitContent() {
         imageInput.files[1],
         imageInput.files[2],
         imageInput.files[3],
-        // document.getElementById("paragraph").value,
-        // document.getElementById("image2").files[0],
-        // document.getElementById("image3").files[0],
-        // document.getElementById("image4").files[0]);
     )
+
+    // return false
 }
 
 async function sendDataAndFile(title, paragraph, image1, image2, image3, image4) {
@@ -34,10 +39,6 @@ async function sendDataAndFile(title, paragraph, image1, image2, image3, image4)
     for (const entry of formData.entries()) {
         console.log(entry);
       }
-    // console.log(title, paragraph);
-
-    let a=10
-    let b = 20
     try {
         const response = await fetch('http://localhost:3001/postevents', {
             method: 'POST',
@@ -59,11 +60,7 @@ async function sendDataAndFile(title, paragraph, image1, image2, image3, image4)
 
 
 
-const topicTitleInput = document.getElementById('topic-title');
-const topicInput = document.getElementById('topic-input');
-const imageInput = document.getElementById('image-input');
-const imagePreviewContainer = document.getElementById('image-preview');
-const submitBtn = document.getElementById('submit-btn');
+
 // const responseContainer = document.getElementById('response-container');
 
 let uploadedImages = [];
@@ -96,12 +93,6 @@ submitBtn.addEventListener('click', (e) => {
   if (topicTitle !== '' && userInput !== '' && uploadedImages.length > 0) {
     // You can send the user input and uploaded images to your server or perform any other action here
     submitContent()
-    // responseContainer.innerHTML = `Thank you for sharing your thoughts about <strong>${topicTitle}</strong>! Your input was: <br><br>${userInput}<br><br>Uploaded Images:`;
-    // for (let i = 0; i < uploadedImages.length; i++) {
-    //   const img = document.createElement('img');
-    //   img.src = URL.createObjectURL(uploadedImages[i]);
-    //   responseContainer.appendChild(img);
-    // }
   } else {
     console.log("enter all fields")
     // responseContainer.innerHTML = 'Please enter topic title, description, and upload at least one image.';

@@ -5,6 +5,7 @@ const cors = require('cors');
 const fileUpload = require('express-fileupload'); 
 
 
+
 const app = express();
 
 app.use(cors());
@@ -14,35 +15,44 @@ app.use(express.static('images/'))
 
 const {db} = require('./database');
 
+app.post('/postevents', async function (req, res) {
 
-app.post('/postevents', async function (req, res){
+  
+  const files = req.files;
 
-const a =  req.files;
+  const filePaths = [];
+    
+    for (const file in files) {
+      const fileData = files[file];
+      const originalFileName = fileData.name;
+      const fileExtension = originalFileName.split('.').pop();
+      const newFileName = `event-${Date.now()}.${fileExtension}`;
+      const path = __dirname + "/images/" + newFileName;
+      await fileData.mv(path);
+      filePaths.push(`/images/${newFileName}`);
+    }
 
-for (const file in req.files) {
-    const fileData = req.files[file]
-    const path = __dirname + "/images/" + fileData.name 
+  let title = req.body.title;
+  let content = req.body.paragraph;
+  let image1 = filePaths[0];
+  let image2 = filePaths[1];
+  let image3 = filePaths[2];
+  let image4 = filePaths[3];
+    
+  await db("events").insert({ title, 
+                              content, 
+                              image1, 
+                              image2, 
+                              image3, 
+                              image4 })
 
-    await fileData.mv(path)
-}
-
-
-    // console.log(req)
-    // for (const entry of a) {
-    //     console.log(entry);
-    //     console.log("hi")
-    //   }
-
-//     const request = await req.body;
-// console.log(request)
-
-// const q = req.query;
-// console.log(q)
-
-}
-);
+    res.send('Files uploaded successfully!');
+  });
 
 
+  // app.get('/events', (req, res) => {
+
+  // })
 
 
 
