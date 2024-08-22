@@ -9,8 +9,8 @@ body,html{
 }
   .logo_img{
       position: relative;
-      padding: auto;
-      margin: auto;
+      padding: 2px;
+      margin: 15px;
   }
 
   .sec_logo{
@@ -32,38 +32,36 @@ body,html{
 @keyframes change{
     0%
     {
-        background-image: url(./../pictures/images/img1.jpg);
+        background-image: url(./../pictures/tour\ 1.jpg);
     }
     20%
     {
-        background-image: url(./../pictures/img2.jpg);
+        background-image: url(./../pictures/tour\ 2.jpg);
     }
     40%
     {
-        background-image: url(./../pictures/img3.jpg);
+        background-image: url(./../pictures/tour\ 1.jpg);
     }
     60%
     {
-        background-image: url(./../pictures/img2.jpg);
+        background-image: url(./../pictures/tour\ 2.jpg);
     }
     80%
     {
-        background-image: url(./../pictures/img1.jpg);
+        background-image: url(./../pictures/tour\ 1.jpg);
     }
     100%
     {
-        background-image: url(./../pictures/img2.jpg);
+        background-image: url(./../pictures/tour\ 2.jpg);
     }
 }
-
-div{
-    display: block;
-    unicode-bidi: isolate;
-
-  }
   
   
   /* About Section */
+  .overview{
+    font-size: 1.5rem;
+    color: #000;
+  }
  .column img{
     border-radius: 3.5rem;
  }
@@ -87,7 +85,7 @@ div{
 .container{
     display: flex;
     flex-wrap: wrap;
-    background-color: #9db3dd;
+    background-color: #ffffff;
     padding: 50px;
 
 
@@ -158,7 +156,7 @@ b{
     padding: 0 2rem 2rem 0;
     font-weight: 600;
     color: rgb(0, 0, 0);
-    font-weight: bold;
+    font-size: 1.2rem;
 
   }
 
@@ -166,7 +164,7 @@ b{
   /* History and vision */
 
   #history-vision{
-    background-color: #ac9c9c;
+    background-color: #f9cf4f;
     display: flex;
     flex-direction: column;
     padding: 2.5rem;
@@ -200,11 +198,9 @@ b{
     margin-right: 10rem;
     padding-block: 3rem;
   }
-
-  /* a{
-    text-decoration: none;
-    color: #010101;
-  } */
+  .heading{
+    font-size: 1.5rem
+  }
   .heading a:hover{
     color: #00266d;
     transition: color 0.3s;
@@ -215,12 +211,12 @@ b{
 
   /* news and events */
   #News-event{
-    /* background-color: #6aa1f4; */
+    background-color: #00266DDB;
   }
   .news-events-container {
     width: 100%;
     padding: 20px;
-    background-color: #fff;
+    /* background-color: #fff; */
     display: flex;
     justify-content: space-evenly;
   }
@@ -262,12 +258,17 @@ b{
 
  /* footer */
   
-
+#footer {
+  background-color: #fff;
+}
  
   
   li {
   list-style-type: none;
+  font-size: 1.5rem;
+  color: #c00f0f;
 }
+
 .left{
   font-size: 3rem;
 }
@@ -335,18 +336,13 @@ overflow: hidden;
 }
 
 
-/* Link Styling */
 
-a:link{
-color: #000;
-  /* text-decoration:overline; */
-  font-weight: 500;
+
+a{
+  color: black;
 }
 
 /* facility */
-a{
-  font-size:  2rem;
-}
 
 .row:after {
   content: "";
@@ -396,5 +392,5 @@ img {
 }
 
 p{
-  font-size: 2em;
+  font-size: 1.5rem;
 }
