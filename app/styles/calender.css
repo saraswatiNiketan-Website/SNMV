@@ -139,7 +139,7 @@ body {
 
 .selectedEvent{
   /* height: 10vh; */
-  background: rgb(0, 255, 0);
+  background: rgb(247, 248, 247);
   width: 100%;
   max-width: 600px;
   padding: 1rem;
@@ -157,19 +157,19 @@ body {
   padding: 2rem;
   background: var(--primary-color);
   /* transform: scale(1.05); */
-  /* font-weight: bold; */
+  font-weight: bold;
+  font-size: 25px;
+  color: aliceblue;
 }
 
 .eventInfo{
-  background-color: blue;
+  background-color:  rgb(241, 202, 128);
   width: calc(100% - 5rem);
   padding: 1rem;
-}
-
-/* .eventDate{
-
+  color: white;
+  
 }
 
 .eventTitle{
-  
-} */
+  color: #1d1d1d;
+}

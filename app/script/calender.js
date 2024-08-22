@@ -383,8 +383,8 @@ function showEvents() {
     // console.log(element)
 
     if (element) {
-      element.style.color = 'brown';
-      element.style.backgroundColor = 'green';
+      element.style.color = 'black';
+      element.style.backgroundColor = '#8080805c';
 
       element.addEventListener('click', () => {
         displayEvent(element, date, holidayName)        
@@ -393,11 +393,6 @@ function showEvents() {
     }
   }
 }
-
-
-
-
-
 
 function displayEvent(eventElement, dateOfEvent , eventName){
   selectedEvent.style.display = 'flex';
