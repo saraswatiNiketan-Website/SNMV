@@ -4,6 +4,7 @@ const imageInput = document.getElementById('image-input');
 const imagePreviewContainer = document.getElementById('image-preview');
 const submitBtn = document.getElementById('submit-btn');
 
+const baseUrl = 'http://localhost:3001'
 
 function submitContent(e) {
 
@@ -40,7 +41,7 @@ async function sendDataAndFile(title, paragraph, image1, image2, image3, image4)
         console.log(entry);
       }
     try {
-        const response = await fetch('http://localhost:3001/postevents', {
+        const response = await fetch('http://localhost:3001/events', {
             method: 'POST',
             body: formData,
         });
@@ -98,3 +99,23 @@ submitBtn.addEventListener('click', (e) => {
     // responseContainer.innerHTML = 'Please enter topic title, description, and upload at least one image.';
   }
 });
+
+
+document.getElementById('delete-btn').addEventListener('click', async function () {
+  console.log("delete request")
+  
+  try {
+    const response = await fetch(`${baseUrl}/events`, {
+      method: "DELETE",
+    });
+    const data = await response.json();
+    window.location.replace("http://www.w3schools.com");
+
+    return data
+  } catch (err) {
+    console.log("Failed to connect server");
+    console.error(err);
+  }
+}
+
+)
