@@ -4,14 +4,22 @@ body,html{
     padding: 0;
     width: 100%;
     height: 100%;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     background-color: rgb(255, 255, 255);
 }
-.logo_img{
+  .logo_img{
+      position: relative;
+      padding: 2px;
+      margin: 15px;
+  }
+
+  .sec_logo{
+    display: flex;
     position: relative;
     padding: auto;
-    margin: auto;
-}
+    justify-content: flex-start;
+    justify-items: center;
+  }
 
 .Section_top{
     width: 100%;
@@ -25,41 +33,43 @@ body,html{
 @keyframes change{
     0%
     {
-        background-image: url(./../pictures/img-1.jpg);
+        background-image: url(./../pictures/tour\ 1.jpg);
     }
     20%
     {
-        background-image: url(./../pictures/img-2.jpg);
+        background-image: url(./../pictures/tour\ 2.jpg);
     }
     40%
     {
-        background-image: url(./../pictures/img-1.jpg);
+        background-image: url(./../pictures/tour\ 1.jpg);
     }
     60%
     {
-        background-image: url(./../pictures/img-2.jpg);
+        background-image: url(./../pictures/tour\ 2.jpg);
     }
     80%
     {
-        background-image: url(./../pictures/img-1.jpg);
+        background-image: url(./../pictures/tour\ 1.jpg);
     }
     100%
     {
-        background-image: url(./../pictures/img-2.jpg);
+        background-image: url(./../pictures/tour\ 2.jpg);
     }
 }
-
-div{
-    display: block;
-    unicode-bidi: isolate;
-
-    /* About Section */
-}
+  
+  
+  /* About Section */
+  .overview{
+    font-size: 1.5rem;
+    color: #000;
+  }
  .column img{
     border-radius: 3.5rem;
  }
 .row{
     display: flex;
+    justify-content: space-between;
+
 
 }
 .column{
@@ -68,6 +78,7 @@ div{
 }
 
 .heading-title{
+    font-size: 3em;
     padding: 2vh;
     margin: auto;
     text-align: center;
@@ -76,6 +87,9 @@ div{
 .container{
     display: flex;
     flex-wrap: wrap;
+    background-color: #ffffff;
+    padding: 50px;
+
 }
 
 .event-content{
@@ -91,6 +105,9 @@ div{
   border-radius: 5px;
   margin-top: 20px;
 }
+b{
+  font-size: 1.5em;
+}
 
 
 /* student life */
@@ -98,11 +115,17 @@ div{
 
 
 #stu-life{
+  height: 900px;
     font-family: Arial, sans-serif;
     background-color: #FFA500; 
     color: white;
     margin: 0;
     padding: 20px;
+}
+.header>h1{
+  display: flex;
+  justify-content: flex-start;
+  font-size: 4rem;
 }
 .header {
     color: #231111;
@@ -122,21 +145,27 @@ div{
     margin-right: 0; /* No space after last image */
   }
   .info-text {
+    display: flex;
     color: #010101;
-    font-size: 1em;
+    font-size: 2em;
     margin-top: 20px;
+    justify-content: end;
   }
   .more-info {
+    display: flex;
+    justify-content: end;
+    padding: 0 2rem 2rem 0;
     font-weight: 600;
     color: rgb(0, 0, 0);
-    font-weight: bold;
+    font-size: 1.2rem;
   }
 
 
   /* History and vision */
 
   #history-vision{
-    background-color: #ac9c9c;
+    background-color: #f9cf4f;
+
     display: flex;
     flex-direction: column;
     padding: 2.5rem;
@@ -144,7 +173,7 @@ div{
   .box{
     display: flex;
     flex-direction: column;
-    height: 400px;
+    height: 100%;
     width: 450px;
     border: 2px solid black;
     margin: 10px;
@@ -152,7 +181,7 @@ div{
     text-align: justify;
     padding: 10px;
     border-radius: 15px;
-    background: linear-gradient(to top, #00266d 50%, white);
+    background: linear-gradient(to top, #055cff 50%, white);
     background-size: 100% 200%;
     transition: all 3s; 
   }
@@ -170,10 +199,8 @@ div{
     margin-right: 10rem;
     padding-block: 3rem;
   }
-
-  a{
-    text-decoration: none;
-    color: #010101;
+  .heading{
+    font-size: 1.5rem
   }
   .heading a:hover{
     color: #00266d;
@@ -181,6 +208,20 @@ div{
     cursor: pointer;        
   }
 
+
+  /* news and events */
+  #News-event{
+    background-color: #00266DDB;
+  }
+  .news-events-container {
+    width: 100%;
+    padding: 20px;
+    /* background-color: #fff; */
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .news-event-block {
+    width: 20%;
   /* news and events */
   .news-events-container {
     width: 100%;
@@ -195,32 +236,173 @@ div{
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 15px;
+
   }
   .news-event-block img {
     width: 100%;
     height: auto;
   }
-  .news-event-block {
-    padding: 15px;
+  .news-event-block:hover{
+    transform: scale(1.02) ;
+    transition: 0.5s;
+    box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.5);
   }
-  
-  .news-event-block {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  
-  .news-event-block {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 10px;
-  }
-  
+
   .view-all-btn {
     display: block;
     font-size: 1.8rem;
     font-family: poppiness;
     text-align: center;
-    padding: 10px;
+    padding: 0 10px 30px 0;
     border-radius: 5px;
     margin-top: 20px;
   }
+  .view-all-btn a:hover{
+      color: #FFA500;
+      transition: 1ms ease-in;
+      
+  }
+
+
+ /* footer */
+  
+#footer {
+  background-color: #fff;
+}
+ 
+  
+  li {
+  list-style-type: none;
+  font-size: 1.5rem;
+  color: #c00f0f;
+}
+
+.left{
+  font-size: 3rem;
+}
+
+.rectangle {
+width: 1px;
+background: #D8D8D8;
+margin: 0 30px 0 0;
+display: inline-block;
+
+}
+
+
+.Eng-lang {
+width: 30%;
+margin: 0;
+display: inline-block;
+
+}
+
+/* Blank Styling */
+
+.about {
+
+width: 30%;
+height: 100px;
+margin: 0;
+display: inline-block;
+
+}
+
+
+/* Nepali bhasa Styling */
+
+.Nep-lang {
+
+width: 30%;
+height: 100px;
+margin: 0;
+display: inline-block;
+
+}
+
+/* Copyright Styling */ 
+
+.rectangle-horiz {
+width: 100%;
+height: 2px;
+background: #D8D8D8;
+margin: 170px 0 0 0;
+
+}
+.copy {
+
+  color: #a7a7a7;
+  font-size: 10px;
+  font-family: Helvetica, Arial, Sans-Serif;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  margin-left: 20px;
+  display: inline-block;
+overflow: hidden;
+
+}
+
+
+
+
+a{
+  color: black;
+}
+
+/* facility */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.column-33 img {
+  height: 100%;
+  width: 100%;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #6aa1f4;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  margin:0 0.9rem;
+}
+
+p{
+  font-size: 1.5rem;
+}
