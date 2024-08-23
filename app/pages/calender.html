@@ -7,15 +7,49 @@
 
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="./../styles/calender.css" />
-
+    <link rel="stylesheet" href="./../styles/nav.css">
     <!-- FONTAWESOME -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+
     <title>Mini Calendar</title>
   </head>
   <body>
+    
+    <div class="menu-container" id="menu-container">
+      <div class="menu-btn" id="menu-btn">&#9776;</div>
+      <div class="menu-label">Menu</div>
+      <div class="menu-box">
+        <nav class="nav" id="nav">
+          <div class="close-btn" id="close-btn">&times;</div>
+          <a href="#" class="nav-link">Home</a>
+          <a href="#" class="nav-link">Gallery</a>
+          <a href="#" class="nav-link">Admissions</a>
+          <a href="#" class="nav-link">Downloads</a>
+          <a href="#" class="nav-link">Facilities</a>
+          <a href="#" class="nav-link">Notice</a>
+          <a href="#" class="nav-link">About<div class="plus-icon">+</div></a>
+          <button class="login-button">Login</button>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="container1">
+    <a href="#" class="bell">&#x1F514;</a>
+    <a href="#" class="bell-label">Notice</a>
+  </div>
+  <div class="container2">
+    <a href="#" class="bell">&#x1F514;</a>
+    <a href="#" class="bell-label">News and Events</a>
+  </div>
+
+  <div class="Section_top">
+    <div class="logo_img">
+      <img src="../pictures/logo_saraswati-niketan.png" alt="" width="150em">
+    </div>
+  </div>
     <div class="container">
       <div class="calendar">
         <div class="header">
@@ -62,10 +96,11 @@
   
       </div>
     </div>
-
+  
 
     <!-- SCRIPT -->
     <script src="./../script/calender.js"></script>
+    <script src="./../script/nav.js"></script>
     <script src="node_modules/ad-bs-date-conversion/AdBsConverter.js"></script>
 
   </body>
