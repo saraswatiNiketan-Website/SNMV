@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>User Input Form</title>
+  <link rel="stylesheet" href="./../styles/addEvent.css">
+</head>
+
+<body>
+
+
+  <div class="topic-input-container">
+    <h1>
+      Add Your Event
+    </h1>
+    <label for="topic-title">Topic Title:</label>
+    <input type="text" id="topic-title" name="topic-title" placeholder="Enter topic title...">
+    <label for="topic-input">Tell us about a topic:</label>
+    <textarea id="topic-input" name="topic-input" rows="10" cols="50"
+      placeholder="Enter your thoughts about the topic..."></textarea>
+    <label for="image-upload">Upload Images (max 4):</label>
+    <div id="image-upload" class="image-upload-container">
+      <input type="file" id="image-input" name="image-input" multiple>
+      <label for="image-input">
+        <i class="fas fa-upload"></i>
+        Drag and drop or browse for images (Currently browsing images is only supported)
+      </label>
+      <div id="image-preview" class="image-preview-container"></div>
+    </div>
+    <button id="submit-btn">Submit</button>
+    <!-- <div id="response-container" class="output"></div> -->
+  </div>
+
+
+
+  <button id="delete-btn">delete</button>
+
+  <script src="./../script/addEvent.js"></script>
+</body>
+
+</html>
