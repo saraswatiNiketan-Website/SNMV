@@ -1,0 +1,40 @@
+body{
+    /* background-repeat: no-repeat; */
+    background-color:#fff(66, 66,165);
+    /* font-family: 'Poppins', sans-serif; */
+    color:#fff;
+    font-size: 0.9rem;
+}
+/* .pics{
+min-height: 400px;
+min-width: 400px;
+display: flex;
+
+} */
+
+  
+  .heading{
+    font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 10px;
+    color: rgb(244, 133, 73);
+    row-gap: 10px;
+      
+  }
+  .event-in-the-school{
+    display: flex;
+    flex-direction:row;
+    margin: 20px;
+  }
+.main-box{
+  display:flex;
+  position: relative;
+  flex-direction: row;
+  border-radius: 30px;
+margin: 50px;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  margin:100px;
+}
