@@ -1,5 +1,5 @@
 .head{
-    background-image:url(../img/header.jpg);
+    background-image:url(../pictures/rawImage.jpg);
    height: 400px;
    /*width: 1595px; */
     border: solid 2px rgb(138, 141, 141);
@@ -9,7 +9,7 @@
 
 }
 .box{
-    background-image:url(../img/gradient.png);
+    background-image:url(../pictures/program-line-bg.png);
     background-color: rgb(4, 4, 68);
     left: 3rem;
     min-width: 15rem;
@@ -17,7 +17,7 @@
     padding: 4rem 3rem 4rem 3rem;
     top: 29rem;
     margin-left: 20px;
-    margin-top: 300px;
+    margin-top: 140px;
     border-radius: 10%;
     /* margin-top: 200px; */
 }
