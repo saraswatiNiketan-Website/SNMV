@@ -46,7 +46,7 @@ app.post('/events', async function (req, res) {
                               image3, 
                               image4 })
 
-    res.send('Files uploaded successfully!');
+    res.json({message:'Files uploaded successfully!'});
   });
 
   // fetch event from db and sent to client
@@ -109,9 +109,26 @@ console.log(eventId[0].id)
     res.json({ message: "event deleted successfully" }).status(204);
   });
   
-  // app.get('/events', (req, res) => {
+  // app.get("/events", async (req, res) => {
+  //   const events = await db("events").orderBy("id", "desc");
+  // console.log(events)
+  //   res.json(events);
+  // });
 
-  // })
+  app.get("/events", async (req, res) => {
+    try {
+      const events = await db("events").orderBy("id", "desc");
+      console.log(events);
+      if (events && events.length > 0) {
+        res.json(events);
+      } else {
+        res.status(404).json({ message: "No events found" });
+      }
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ message: "Internal Server Error" });
+    }
+  });
 
   async function getImagePaths(eventId) {
     console.log("hi")
@@ -135,7 +152,7 @@ console.log(eventId[0].id)
     }
   }
     // Assuming deleteImage is defined elsewhere
-    async function deleteImage(imageUrl) {
+async function deleteImage(imageUrl) {
       // Implement your image deletion logic here (e.g., using fetch or axios)
       try {
         const response = await fetch(imageUrl, {
@@ -172,7 +189,49 @@ console.log(eventId[0].id)
 
 
 
+app.post('/admissions', async function (req, res) {
+  console.log('hi')
 
+  const {
+    studentName,
+    dob,
+    gender,
+    bloodGroup,
+    religion,
+    nationality,
+    otherInformation,
+    admissionFor,
+    previousSchool,
+    fatherName,
+    fatherContact,
+    motherName,
+    motherContact,
+    guardianName,
+    guardianContact,
+    guardianRelation
+} = req.body;
+
+  await db('newAdmission').insert(studentName,
+    dob,
+    gender,
+    bloodGroup,
+    religion,
+    nationality,
+    otherInformation,
+    admissionFor,
+    previousSchool,
+    fatherName,
+    fatherContact,
+    motherName,
+    motherContact,
+    guardianName,
+    guardianContact,
+    guardianRelation)
+
+
+
+  res.json({message:'Admission form submitted'});
+});
 
 
 
