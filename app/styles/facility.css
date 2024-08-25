@@ -6,22 +6,31 @@
     font-family: "Poppins", sans-serif;
     /* width: 100%; */
 }
-@media screen and (max-width:665px){
-    :root{
-        scroll-behavior: smooth;
+ /* @media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .outer {
+        flex-direction: column;
+    }
+
+    .image-content, .content {
+        width: 100%;
     }
 } 
-/* @media screen and (max-width: 1000px) {
-    .column-66,
-    .column-33 {
-      width: 100%;
-      text-align: center;
-    } */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+} */
+
 body {
     overflow-x: hidden;
     /* width: 80%; */
     /* background-color:white; */
-    color: blueviolet;
+    
     font-size: 0.9rem;
 }
 
