@@ -26,6 +26,7 @@
     align-items: center;
     font-size: 1.5rem;
     color: #aaff55;
+    overflow: hidden;
 }
 
 .menu-container:hover .menu-btn {
@@ -124,6 +125,8 @@
     transition: color 0.4s ease; /* Smooth color transition */
     background-color: #f6f6ee;
     justify-content: center;
+    text-decoration: none;
+    overflow: hidden;
 }
 
 .close-btn:hover {
@@ -147,10 +150,12 @@
     transition: background-color 0.3s ease;
     text-align: center;
     transition: right 0.3s ease;
+    overflow: hidden;
 }
 
 .container2 {
     top: 9rem; /* Adjusted top position */
+    overflow: hidden;
 }
 
 .container1:hover,
@@ -166,6 +171,7 @@
     align-items: center;
     font-size: 1.5rem;
     color: #aaff55; /* Initial color */
+    overflow: hidden;
     text-decoration: none;
 }
 
@@ -176,6 +182,7 @@
 
 .bell-label {
     text-decoration: none;
+    
     color: black;
     font-weight: 600;
 }
