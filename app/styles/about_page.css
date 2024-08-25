@@ -1,0 +1,126 @@
+body{
+    color: rgb(240, 248, 255);
+    /* color: yellow; */
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+.middle {
+    display: block;
+    width: 80%;
+    margin: 4rem auto;
+    text-align: center;
+    font-size: 1rem;
+    /* background-color: red; */
+}
+
+.principal-message {
+    /* height: 40vh; */
+    height: fit-content;
+    background: rgb(78, 109, 180);
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .principal-message {
+        flex-direction: column;
+    }
+
+    .principal-image {
+        margin-top: 2rem;
+    }
+}
+
+.principal-message{
+    background-color: rgb(1, 28, 90);
+}
+.principal-image-box{
+    text-align: center;
+    color: yellow;
+}
+.principal-image {
+    height: 30vh;
+    border: 0.14rem solid yellow;
+    border-radius: 50%;
+    aspect-ratio: 14.81 / 14.97;
+}
+
+.principal-message-text {
+    /* color: black; */
+    color: yellow;
+    padding: 0.5rem;
+    text-align: justify;
+}
+
+.principal-message-head {
+    margin: 2rem;
+    text-align: center;
+}
+
+.staffs {
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.individual-staff {
+    margin: 1rem;
+    /* background-color: #eee9aa; */
+    /* background: #ece5c5; */
+    /* background-color: rgb(189, 189, 90); */
+    /* color: rgb(66, 66, 165); */
+    color: whitesmoke;
+    width: fit-content;
+    padding: 2rem 1rem;
+    border-radius: 2rem;
+}
+
+.individual-staff a{
+    /* text-decoration: none; */
+    color: wheat;
+}
+
+
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+.visions {
+    background-color: rgb(108, 108, 216);
+    color: black;
+}
+
+.visions-point {
+    margin-left: 1rem;
+    color: wheat;
+    border-left: 1px solid wheat;
+    /* border-top: 1px solid; */
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.visions-point::before {
+    content: "";
+    border: 0.5rem solid wheat;
+    border-radius: 50%;
+    position: absolute;
+    left: 0.5rem;
+    /* z-index: 1; */
+}
+
+.vision-head {
+    width: fit-content;
+    color: wheat;
+    border-bottom: 1px solid wheat;
+    padding: 0.2rem 0.4rem;
+    padding-bottom: 0;
+}
