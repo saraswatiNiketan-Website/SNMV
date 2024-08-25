@@ -1,0 +1,159 @@
+/* base */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    /*  */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    font-size: 0.9rem;
+    background-color: rgb(65 105 225);
+
+    /* color: rgba(255, 255, 255, 0.9);
+    color: yellow; */
+}
+
+
+/* admission form */
+
+
+
+
+
+
+
+
+
+body {
+    color: yellow;
+}
+
+.watermark {
+    background-image: url('../pictures/logo_saraswati-niketan.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
+.gender-select {
+    margin: 1.4rem 0;
+}
+
+input#student-name,
+#date-of-birth,
+#nationality,
+#previous-school,
+#father-name,
+#father-contact,
+#mother-name,
+#mother-contact,
+#guardian-name,
+#guardian-contact,
+#guardian-relation {
+    opacity: 0.9;
+    height: 2.03rem;
+    margin-bottom: 1.04rem;
+}
+
+#other-information {
+    margin-bottom: 1rem;
+}
+
+select#blood,
+#religion,
+#admission-for {
+    opacity: 0.9;
+    margin-bottom: 1.04rem;
+    height: 2.03rem;
+}
+
+textarea{
+    opacity: 0.9;
+}
+h2{
+    margin-top: 1rem;
+}
+h2,h5,h6 {
+    text-align: center;
+}
+
+main {
+    max-width: 650px;
+    margin: auto;
+}
+
+label {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+legend {
+    padding: 1.07rem;
+    font-size: 1.3rem;
+}
+
+fieldset {
+    padding: 0 1.06rem;
+    border-color: yellow;
+    display: grid;
+}
+
+.gender-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.2rem 0;
+}
+
+.gender-label {
+    margin: 0;
+    padding: 0;
+}
+
+.gender-male-female {
+    display: flex;
+    align-items: center;
+}
+
+option {
+    background: aquamarine;
+}
+
+#btn {
+    margin: 0.6rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    padding: 12px;
+    background-color: #000;
+    color: #fffbfb;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: rgb(122, 83, 248);
+    border: 2px solid rgb(206, 206, 141);
+    transition: all 1s;
+}
