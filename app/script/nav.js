@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 container.style.right = '260px';
             });
         } else {
-            menuContainer.style.right = '15px';
+            menuContainer.style.right = '0px';
             containers.forEach(container => {
-                container.style.right = '15px';
+                container.style.right = '0px';
             });
         }
     }
