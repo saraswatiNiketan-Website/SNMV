@@ -10,7 +10,6 @@
    /* background: #000; */
 }
 
-
 .whole-container{
     background-image: url(../pictures/world-map1.png);
     background-repeat: no-repeat;
@@ -58,8 +57,6 @@
 }
 
 
-
-
 .slide::after{
     transition: 0.3s;
     transition-timing-function: ease-in-out;
@@ -74,7 +71,7 @@
 
 .nav-tm{
     text-align: center;
-    margin-top: 550px;
+    margin-top: 520px;
 }
 .nav-tm button{
     font-size: 30px;
