@@ -65,7 +65,16 @@
      margin-bottom: 20px;
  }
 
-#submit-btn {
+/* #submit-btn */
+
+.buttons {
+     margin-top: 1rem;
+     gap: 1rem;
+     display: flex;
+     justify-content: center;
+ }
+
+ button{
 background-color: #4CAF50;
 color: #fff;
 padding: 10px 20px;
@@ -77,7 +86,7 @@ cursor: pointer;
 align-self: center;
 }
 
-#submit-btn:hover {
+button:hover {
 background-color: #3e8e41;
 }
 

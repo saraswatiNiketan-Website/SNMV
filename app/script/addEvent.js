@@ -109,7 +109,7 @@ document.getElementById('delete-btn').addEventListener('click', async function (
       method: "DELETE",
     });
     const data = await response.json();
-    window.location.replace("http://www.w3schools.com");
+    window.location.replace("./../index.html");
 
     return data
   } catch (err) {

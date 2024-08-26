@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* text-decoration:; */
+        }
+
+        body{
+            background-color: rgb(65 105 225);
+            /* width: 100%; */
+            /* display: flex;
+            justify-content: center; */
+        }
+        .container {
+            /* width: 100; */
+
+            /* max-width: 1000px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* display: grid; */
+    /* grid-column: 1fr 1fr; */
+    /* grid-row: 1fr 1fr; */
+    height: 100vh;
+}
+
+.box {
+    width: 20vw;
+    aspect-ratio: 1;
+    /* height: 100px; */
+    /* background-color: #ddd; */
+    background-color: rgb(252 186 99);
+
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    margin: 20px;
+    /* text-decoration: none; */
+}
+
+.box:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.box a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: rgb(65 105 225);
+    font-weight: bold;
+}
+    </style>
+
+<link rel="icon" type="image/x-icon" href="./../pictures/logo_saraswati-niketan.png">
+
+
+</head>
+<body>
+
+    <div style="
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: change 30s infinite ease-in ;
+        ">
+        <div style="height: 100px;
+        width: 130px;
+        display: block;
+        margin: 1rem 0 0 1rem;" onclick="window.location.href='./../index.html'">
+          <img src="../pictures/logo_saraswati-niketan.png" alt="" width="150em">
+        </div>
+
+        <figure style="display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 2.5rem;
+        left: 28%;">
+            <img src="../pictures/nepal-bhasa/saraswati.png" alt="" style="height: 5rem;">
+            <img src="../pictures/nepal-bhasa/niketan.png" alt="" style="height: 5rem;">
+            <img src="../pictures/nepal-bhasa/madhyamik.png" alt="" style="height: 5rem;">
+            <img src="../pictures/nepal-bhasa/bidhyalaya .png" alt="" style="height: 5rem;">
+        </figure>
+
+
+
+      </div>
+
+
+
+    <div class="container">
+        <div class="box" id="box-1">
+            <a href="./addEvent.html">Add Events</a>
+        </div>
+        <div class="box" id="box-2">
+            <a href="./addNotice.html">Add Notices</a>
+        </div>
+        <div class="box" id="box-3">
+            <a href="contact.html">New Enrollments</a>
+        </div>
+        <!-- <div class="box" id="box-4">
+            <a href="services.html">Services</a>
+        </div> -->
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+     <script>
+        // Add event listeners to each box
+document.querySelectorAll('.box').forEach((box) => {
+    box.addEventListener('click', (e) => {
+        // Get the href attribute of the anchor tag inside the box
+        const href = box.querySelector('a').getAttribute('href');
+        // Redirect to the specified page
+        window.location.href = href;
+    });
+});
+     </script>
+</body>
+</html>

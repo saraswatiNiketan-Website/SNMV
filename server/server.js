@@ -29,7 +29,7 @@ app.post('/events', async function (req, res) {
       const newFileName = `event-${Date.now()}.${fileExtension}`;
       const path = __dirname + "/images/" + newFileName;
       await fileData.mv(path);
-      filePaths.push(`/images/${newFileName}`);
+      filePaths.push(`${newFileName}`);
     }
 
   let title = req.body.title;
@@ -48,34 +48,6 @@ app.post('/events', async function (req, res) {
 
     res.json({message:'Files uploaded successfully!'});
   });
-
-  // fetch event from db and sent to client
-  // app.get("/events", async (req, res) => {
-  //   const events = await db("events").orderBy("id", "desc");
-  
-  //   const q = req.query;
-  
-  //   console.log(q);
-  //   res.json(events);
-  // });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   app.delete("/events", async (req, res) => {
     console.log("delete requested")
@@ -108,22 +80,16 @@ console.log(eventId[0].id)
     
     res.json({ message: "event deleted successfully" }).status(204);
   });
-  
-  // app.get("/events", async (req, res) => {
-  //   const events = await db("events").orderBy("id", "desc");
-  // console.log(events)
-  //   res.json(events);
-  // });
 
   app.get("/events", async (req, res) => {
     try {
       const events = await db("events").orderBy("id", "desc");
-      console.log(events);
-      if (events && events.length > 0) {
+      // console.log(events);
+      // if (events && events.length > 0) {
         res.json(events);
-      } else {
-        res.status(404).json({ message: "No events found" });
-      }
+      // } else {
+        // res.status(404).json({ message: "No events found" });
+      // }
     } catch (error) {
       console.error(error);
       res.status(500).json({ message: "Internal Server Error" });
@@ -151,46 +117,8 @@ console.log(eventId[0].id)
       return null; // Handle the case where the event is not found
     }
   }
-    // Assuming deleteImage is defined elsewhere
-async function deleteImage(imageUrl) {
-      // Implement your image deletion logic here (e.g., using fetch or axios)
-      try {
-        const response = await fetch(imageUrl, {
-          method: 'DELETE',
-        });
-  
-        if (!response.ok) {
-          throw new Error('Error deleting image');
-        }
-  
-        console.log('Image deleted successfully');
-      } catch (error) {
-        console.error('Error deleting image:', error);
-      }
-    }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 app.post('/admissions', async function (req, res) {
-  console.log('hi')
 
   const {
     studentName,
@@ -210,8 +138,9 @@ app.post('/admissions', async function (req, res) {
     guardianContact,
     guardianRelation
 } = req.body;
+console.log(req.body);
 
-  await db('newAdmission').insert(studentName,
+  await db('newAdmission').insert({studentName,
     dob,
     gender,
     bloodGroup,
@@ -226,102 +155,67 @@ app.post('/admissions', async function (req, res) {
     motherContact,
     guardianName,
     guardianContact,
-    guardianRelation)
-
-
+    guardianRelation})
 
   res.json({message:'Admission form submitted'});
+});
+
+app.get("/admissions", async (req, res) => {
+  try {
+    const admissions = await db("newAdmission").orderBy("id", "desc");
+    // console.log(events);
+    // if (events && events.length > 0) {
+      res.json(admissions);
+    // } else {
+      // res.status(404).json({ message: "No events found" });
+    // }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
 });
 
 
 
 
+app.post('/notices',async function(req, res) {
+  const {subject, description} = req.body;  
+
+  await db('notices').insert({description,subject})
+
+  res.json({message:'notices submitted'});
+});
+
+app.delete("/notices", async (req, res) => {
+  console.log("delete requested")
+  
+  const noticeId = await db("notices").max("id as id");
+ 
+  console.log(noticeId[0])
+  await db("notices").del().where({ id: noticeId[0].id });
+  
+  res.json({ message: "notice deleted successfully" }).status(204);
+});
+
+app.get("/notices", async (req, res) => {
+  try {
+    const notices = await db("notices").orderBy("id", "desc");
+    // console.log('notices hitted');
+    // console.log(notices)
+    // if (events && events.length > 0) {
+      res.json(notices).status(200);
+    // } else {
+      // res.status(404).json({ message: "No events found" });
+    // }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+});
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const loggedInUsers = [{
-//     id: "9"
-// }]
-
-// app.get('api/is-logged-in', (req, res) => {
-
-//     const {userId} = req.query;
-
-//     loggedInUsers.map(({id}) => id).includes(userId)
-
-//     res.json(
-//         {
-//             isLoggedIn: true
-//         }
-//     )
-
-//     }
-// )
 
 
 

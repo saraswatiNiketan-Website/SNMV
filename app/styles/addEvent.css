@@ -97,7 +97,13 @@ label[for="image-upload"] {
   border-radius: 10px;
 }
 
-#submit-btn {
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+button {
   background-color: #4CAF50;
   color: #fff;
   padding: 10px 20px;
@@ -109,7 +115,7 @@ label[for="image-upload"] {
   align-self: center;
 }
 
-#submit-btn:hover {
+button:hover {
   background-color: #3e8e41;
 }
 

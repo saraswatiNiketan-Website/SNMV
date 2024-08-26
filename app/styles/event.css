@@ -1,40 +1,31 @@
-body{
-    /* background-repeat: no-repeat; */
-    background-color:#fff(66, 66,165);
-    /* font-family: 'Poppins', sans-serif; */
-    color:#fff;
-    font-size: 0.9rem;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-/* .pics{
-min-height: 400px;
-min-width: 400px;
-display: flex;
 
-} */
-
-  
-  .heading{
-    font-size: 1.2rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 10px;
-    color: rgb(244, 133, 73);
-    row-gap: 10px;
-      
-  }
-  .event-in-the-school{
-    display: flex;
-    flex-direction:row;
-    margin: 20px;
-  }
-.main-box{
-  display:flex;
-  position: relative;
-  flex-direction: row;
-  border-radius: 30px;
-margin: 50px;
-}
-.container{
+main{
+  margin: 10rem 2rem 2rem 2rem;
   display: flex;
-  flex-direction: column;
-  margin:100px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.container .heading{
+  font-size: 2.5rem;
+  /* margin-top: 0; */
+}
+
+.container a{
+  text-decoration: none;
+  color: rgb(240, 136, 0);
+  /* font-size: 2.5rem; */
+  /* margin-top: 0; */
+}
+
+.container a:hover{
+  text-decoration: underline;
+  color: rgb(240, 136, 0);
+  /* font-size: 2.5rem; */
+  /* margin-top: 0; */
 }

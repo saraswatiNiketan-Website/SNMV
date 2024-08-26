@@ -9,7 +9,38 @@ const noticeForm = document.getElementById('notice-form');
         const description = document.getElementById('description').value.trim();
         if (subject === '' || description === '') {
             alert('Please enter both subject and description');
+            return
         }
+
+// console.log(subject, description);
+        try {
+            const response = await fetch('http://localhost:3001/notices', {
+                method: 'POST',
+                body: JSON.stringify({subject, description}),
+                headers: {
+                    "Content-Type": "application/json",
+                  },
+            });
+    
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+    
+            const data = await response.json();
+            console.log(data); // Handle the server's response
+        } catch (error) {
+            console.error('Error:', error);
+        }
+
+
+
+
+
+
+
+
+
+
             // const noticeHTML = `
             //     <h2>${subject}</h2>
             //     <p>${description}</p>
@@ -37,3 +68,23 @@ const noticeForm = document.getElementById('notice-form');
                 
             // }
     });
+
+
+    document.getElementById('delete-btn').addEventListener('click', async function () {
+        console.log("delete requested")
+        
+        try {
+          const response = await fetch(`${baseUrl}/events`, {
+            method: "DELETE",
+          });
+          const data = await response.json();
+          window.location.replace("http://www.w3schools.com");
+      
+          return data
+        } catch (err) {
+          console.log("Failed to connect server");
+          console.error(err);
+        }
+      }
+      
+      )
