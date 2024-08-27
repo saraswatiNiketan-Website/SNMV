@@ -45,15 +45,16 @@
             if(username == 'rabina'&&password == 'snmv'){
 
                 // Prompt the user to choose between Page A or Page B
-                const choice = prompt('Where would you like to be redirected? Enter "A" for addnotice or "B" for AdminDashboard:');
+                // const choice = prompt('Where would you like to be redirected? Enter "A" for addnotice or "B" for AdminDashboard:');
                 
-                if (choice === 'A') {
-                    window.location.href = 'addNotice.html'; // Replace with the URL for Page A
-                } else if (choice === 'B') {
-                    window.location.href = 'addEvent.html'; // Replace with the URL for Page B
-                } else {
-                    alert('Invalid choice. Please enter "A" or "B".');
-                }
+                // if (choice === 'A') {
+                //     window.location.href = 'addNotice.html'; // Replace with the URL for Page A
+                // } else if (choice === 'B') {
+                //     window.location.href = 'addEvent.html'; // Replace with the URL for Page B
+                // } else {
+                //     alert('Invalid choice. Please enter "A" or "B".');
+                // }
+                window.location.href = './adminDashboard.html'; // Replace with the URL for Page
             }
             else {
                 alert('invalid choice. Please try again')

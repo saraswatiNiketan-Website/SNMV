@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4; */
+    background-color: rgb(65 105 225);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 80%;
+    height: 60vh;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 5rem;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+}
+ 
+::-webkit-scrollbar{
+    display: none;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+
+details {
+    background: #e2e2e2;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    </style>
+
+    <link rel="icon" type="image/x-icon" href="./../pictures/logo_saraswati-niketan.png">
+
+</head>
+
+<body>
+    <div style="
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: change 30s infinite ease-in ;
+        ">
+        <div style="height: 100px;
+        width: 130px;
+        display: block;
+        margin: 1rem 0 0 1rem;" onclick="window.location.href='./../index.html'">
+          <img src="../pictures/logo_saraswati-niketan.png" alt="" width="150em">
+        </div>
+
+        <figure style="display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: absolute;
+        top: 1rem;
+        left: 28%;">
+            <img src="../pictures/nepal-bhasa/saraswati.png" alt="" style="height: 5rem;">
+            <img src="../pictures/nepal-bhasa/niketan.png" alt="" style="height: 5rem;">
+            <img src="../pictures/nepal-bhasa/madhyamik.png" alt="" style="height: 5rem;">
+            <img src="../pictures/nepal-bhasa/bidhyalaya .png" alt="" style="height: 5rem;">
+        </figure>
+
+
+
+      </div>
+
+
+
+
+
+
+    <main>
+        <h1>New Enrollment Form Fill-ups</h1>
+        <!-- <details>
+            <summary>
+                fas
+            </summary>
+            fsa
+        </details> -->
+    </main>
+
+
+    <script>
+
+        const baseUrl = 'http://localhost:3001'
+
+
+
+        window.onload = async () => {
+
+            try {
+                const response = await fetch(`${baseUrl}/admissions`);
+                const dataset = await response.json();
+
+
+                dataset.forEach(function (data) {
+                    let newStudent = document.createElement("details");
+                    newStudent.innerHTML = `
+                    <summary>
+                        ${data.studentName}  
+                    </summary>
+                    <p>
+                        Date of Birth: ${data.dob}<br>
+                        Gender: ${data.gender} <br>
+                        Blood Group: ${data.bloodGroup} <br>
+                        Religion: ${data.religion} <br>
+                        Nationality: ${data.nationality} <br>
+                        Other Information: ${data.otherInformation} <br>
+                        Admission For: ${data.admissionFor} <br>
+                        Previous School: ${data.previousSchool} <br>
+                        Father's Name: ${data.fatherName} <br>
+                        Father's Contact: ${data.fatherContact} <br>
+                        Mother's Name: ${data.motherName} <br>
+                        Mother's Contact: ${data.motherContact} <br>
+                        Guardian's Name: ${data.guardianName} <br>
+                        Guardian's Contact: ${data.guardianContact} <br>
+                        Guardian's Relation: ${data.guardianRelation} <br>
+                    </p>
+            `;
+                    document.querySelector("main").appendChild(newStudent);
+                })
+
+            }
+            catch (err) {
+                console.log("Failed to connect server");
+                console.error(err);
+            }
+
+
+        };
+
+    </script>
+</body>
+
+</html>

@@ -1,9 +1,12 @@
+const baseUrl = 'http://localhost:3001'
+
+
 const noticeForm = document.getElementById('notice-form');
 // const subjectElement = document.getElementById('subject');
 // const descriptionElement = document.getElementById('description');
     // const noticeList = document.getElementById('notice-list');
     
-    noticeForm.addEventListener('submit', async (e) => {
+    document.getElementById('submit-btn').addEventListener('click', async (e) => {
         e.preventDefault();
         const subject = document.getElementById('subject').value.trim();
         const description = document.getElementById('description').value.trim();
@@ -70,15 +73,18 @@ const noticeForm = document.getElementById('notice-form');
     });
 
 
-    document.getElementById('delete-btn').addEventListener('click', async function () {
+    document.getElementById('delete-button').addEventListener('click', async function (e) {
+        e.preventDefault();
+
         console.log("delete requested")
         
         try {
-          const response = await fetch(`${baseUrl}/events`, {
+          const response = await fetch(`${baseUrl}/notices`, {
             method: "DELETE",
           });
           const data = await response.json();
-          window.location.replace("http://www.w3schools.com");
+          window.location.replace("./../index.html");
+
       
           return data
         } catch (err) {

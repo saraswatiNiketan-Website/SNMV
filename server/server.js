@@ -3,6 +3,7 @@ const baseUrl = 'http://localhost:3001'
 const express = require('express');
 const cors = require('cors');
 const fileUpload = require('express-fileupload'); 
+const fs = require('fs');
 
 
 
@@ -62,19 +63,31 @@ console.log(eventId[0].id)
 
     if (event) {
       // Download and delete each image
-      const image1Url = `${baseUrl}/images/${event.image1}`;
-      await deleteImage(image1Url);
+      const image1Url = `./images/${event.image1}`;
+      // await deleteImage(image1Url);
+      fs.unlink(image1Url, function () {
+        console.log("Image deleted successfully");
+      });
     
-      const image2Url = `${baseUrl}/images/${event.image2}`;
-      await deleteImage(image2Url);
+      const image2Url = `./images/${event.image2}`;
+      fs.unlink(image2Url, function () {
+        console.log("Image deleted successfully");
+      })
+      // await deleteImage(image2Url);
     
-      const image3Url = `${baseUrl}/images/${event.image3}`;
-      await deleteImage(image3Url);
+      const image3Url = `./images/${event.image3}`;
+      fs.unlink(image3Url, function () {
+        console.log("Image deleted successfully");
+      })
+      // await deleteImage(image3Url);
     
-      const image4Url = `${baseUrl}/images/${event.image4}`;
-      await deleteImage(image4Url);
+      const image4Url = `./images/${event.image4}`;
+      fs.unlink(image4Url, function () {
+        console.log("Image deleted successfully");
+      });
+      // await deleteImage(image4Url);
 
-      return
+      // return
     }
     await db("events").del().where({ id: eventId[0].id });
     
@@ -119,6 +132,7 @@ console.log(eventId[0].id)
   }
 
 app.post('/admissions', async function (req, res) {
+  console.log('requested admissions');
 
   const {
     studentName,
