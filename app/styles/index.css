@@ -52,7 +52,7 @@ body,html{
     }
     100%
     {
-        background-image: url(./../pictures/tour\ 2.jpg);
+        background-image: url(./../pictures/tour\ 1.jpg);
     }
 }
   
@@ -76,20 +76,24 @@ body,html{
 }
 
 .heading-title{
-    font-size: 3em;
-    padding: 2vh;
-    margin: auto;
-    text-align: center;
+  color: white;
+  font-size: 3em;
+  padding: 2vh;
+  margin: auto;
+  text-align: center;
 }
 
 .container{
+    /* display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    padding: 50px; */
     display: flex;
     flex-wrap: wrap;
     background-color: #ffffff;
     padding: 50px;
-
-
 }
+
 
 .event-content{
     padding: 0 1rem;
@@ -116,10 +120,10 @@ b{
 #stu-life{
   height: 900px;
     font-family: Arial, sans-serif;
-    background-color: #FFA500; 
+    background-color: #FFA500;
     color: white;
-    margin: 0;
-    padding: 20px;
+    margin: 0 0 0 -37px;
+    padding: 40px;
 }
 .header>h1{
   display: flex;
@@ -199,7 +203,8 @@ b{
     padding-block: 3rem;
   }
   .heading{
-    font-size: 1.5rem
+    font-size: 1.5rem;
+    padding: 5px;
   }
   .heading a:hover{
     color: #00266d;
@@ -232,8 +237,8 @@ b{
     padding: 15px;
   }
   .news-event-block img {
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 9.3rem;
   }
   .news-event-block:hover{
     transform: scale(1.02) ;
@@ -248,6 +253,9 @@ b{
     padding: 0 10px 30px 0;
     border-radius: 5px;
     margin-top: 20px;
+  }
+  .view-all-btn>a{
+    color: #fff;
   }
   .view-all-btn a:hover{
       color: #FFA500;
@@ -309,6 +317,7 @@ width: 30%;
 height: 100px;
 margin: 0;
 display: inline-block;
+text-align: right;
 
 }
 
