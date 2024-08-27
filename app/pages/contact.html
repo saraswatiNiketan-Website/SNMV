@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Saraswati Niketan Secondary School</title>
+
+    <link rel="icon" type="image/x-icon" href="../pictures/logo_saraswati-niketan.png">
+
+    <link rel="stylesheet" href="../styles/base.css">
+
+
+    <link rel="stylesheet" href="../styles/contact.css">
+</head>
+
+<body>
+
+    <div style="
+    width: 100%;
+    position: block;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: change 30s infinite ease-in ;
+    ">
+    <div style="height: 100px;
+    width: 130px;
+    display: block;
+    margin: 1rem 0 0 1rem;" onclick="window.location.href='./../index.html'">
+      <img src="../pictures/logo_saraswati-niketan.png" alt="" width="150em">
+    </div>
+
+    <figure style="display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 1rem;
+    left: 28%;">
+        <img src="../pictures/nepal-bhasa/saraswati.png" alt="" style="height: 5rem;">
+        <img src="../pictures/nepal-bhasa/niketan.png" alt="" style="height: 5rem;">
+        <img src="../pictures/nepal-bhasa/madhyamik.png" alt="" style="height: 5rem;">
+        <img src="../pictures/nepal-bhasa/bidhyalaya .png" alt="" style="height: 5rem;">
+    </figure>
+
+
+
+  </div>
+
+
+
+<div class="content">
+
+    <div class="contact-title">
+        <h2>Contact us</h2>
+        <p class="para">
+            Providing quality education for bright futures 
+        </p>
+    </div>
+
+    <div class="contact-in">
+        <div class="contact-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2535.9898376946235!2d85.30328563176624!3d27.69765535663506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18574cd1bb8f%3A0xe88b32e7e96a785d!2sSaraswati%20Niketan%20Sec.%20School!5e1!3m2!1sen!2snp!4v1688817000179!5m2!1sen!2snp"
+                width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-form">
+            <h1>Contact us</h1>
+            <form  method="post">
+                <input type="text" placeholder="Name" name="name" class="contact-form-txt" id="name">
+                <input type="email" placeholder="Email" name="email-address" class="contact-form-txt" id="email">
+                <textarea placeholder="Message to our school" name="message" class="contact-form-txtarea" id="message"></textarea>
+                <input type="submit" name="submit" class="contact-form-btn" id="subbmit-btn">
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+const baseUrl = 'http://localhost:3001'
+
+
+
+    document.getElementById("subbmit-btn").addEventListener("click", async function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        try {
+            const response = await fetch('http://localhost:3001/contact', {
+                method: 'POST',
+                body: JSON.stringify({name, email, message}),
+                headers: {
+                    "Content-Type": "application/json",
+                  },
+            });
+    
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+    
+            const data = await response.json();
+            window.location.href = './../index.html';
+
+            console.log(data); // Handle the server's response
+        } catch (error) {
+            console.error('Error:', error);
+        }
+
+
+        alert("Form submitted successfully!");
+    });
+</script>
+</body>
+
+</html>

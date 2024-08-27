@@ -34,7 +34,7 @@ window.onload = async (event) => {
             <h1 class="heading">
             ${event.title}
             </h1>
-            <a href=""> READ MORE </a>
+            <a href="singleevent.html?id=${event.id}"> READ MORE </a>
             
             `;
             eventBox.appendChild(newEvent);

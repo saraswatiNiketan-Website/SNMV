@@ -228,8 +228,29 @@ app.get("/notices", async (req, res) => {
 });
 
 
+app.post('/contact',async function(req, res) {
+  const {name, email, message} = req.body;  
 
+  await db('contact').insert({name, email, message})
 
+  res.json({message:'message submitted'});
+});
+
+app.get("/contact", async (req, res) => {
+  try {
+    const contacts = await db("contact").orderBy("id", "desc");
+    // console.log('notices hitted');
+    // console.log(notices)
+    // if (events && events.length > 0) {
+      res.json(contacts).status(200);
+    // } else {
+      // res.status(404).json({ message: "No events found" });
+    // }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+});
 
 
 

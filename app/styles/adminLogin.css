@@ -47,6 +47,8 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 form input{
     border: 1px solid black;
     border-radius: 1rem;
+    font-size: 1.5rem;
+
 }
 
 form>*{
