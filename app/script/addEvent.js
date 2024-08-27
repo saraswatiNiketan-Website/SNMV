@@ -94,6 +94,8 @@ submitBtn.addEventListener('click', (e) => {
   if (topicTitle !== '' && userInput !== '' && uploadedImages.length > 0) {
     // You can send the user input and uploaded images to your server or perform any other action here
     submitContent()
+    window.location.href = './../index.html';
+
   } else {
     console.log("enter all fields")
     // responseContainer.innerHTML = 'Please enter topic title, description, and upload at least one image.';

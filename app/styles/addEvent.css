@@ -3,6 +3,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(65 105 225);
+
 }
 
 

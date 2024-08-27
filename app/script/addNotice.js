@@ -30,6 +30,8 @@ const noticeForm = document.getElementById('notice-form');
             }
     
             const data = await response.json();
+            window.location.href = './../index.html';
+
             console.log(data); // Handle the server's response
         } catch (error) {
             console.error('Error:', error);
