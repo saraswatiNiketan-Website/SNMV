@@ -4,28 +4,9 @@
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
     /* width: 100%; */
 }
- /* @media (max-width: 768px) {
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .outer {
-        flex-direction: column;
-    }
-
-    .image-content, .content {
-        width: 100%;
-    }
-} 
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-} */
-
 body {
     overflow-x: hidden;
     /* width: 80%; */
@@ -34,31 +15,30 @@ body {
     font-size: 0.9rem;
 }
 
-.header {
-    background-color: brown;
-    height: 400px;
-    /* width: 1595px; */
-    width: 100vw;
-    border: solid 2px blanchedalmond;
-    /* padding: 10px; */
-    margin: 0%;
-}
 
-.index {
-    background-color: beige;
-    opacity: 70%;
-    left: 3rem;
-    min-width: 15rem;
-    max-width: 23rem;
-    padding: 4rem 3rem 4rem 3rem;
-    box-shadow: 4px 6px 30px darkgreen;
-    border-radius: 30px;
-    top: 29rem;
-    margin-left: 20px;
-    margin-top: 300px;
+.header{
+    background: url(../pictures/rawImage.jpg);
+     height: 17pc;
+     width: 1595px;
+     margin: 0%;
+     border: solid 2px blanchedalmond;
+     padding: 90px;
+     margin: 0%;
+     overflow-x: clip;
+ }
 
+ .index{
+     background-color: beige;
+     opacity: 90%;
+     left:3rem;
+     margin:100px;
+     max-width: 22rem;
+     padding: 3rem 2rem;
+     box-shadow: 4px 6px 30px darkgreen;
+     border-radius: 30px;
+     margin-left: 20px;
+ }
 
-}
 
 .facility {
     color: #152b71;
@@ -76,7 +56,24 @@ body {
     justify-content: center;
 }
 
-
+@media (max-width:480px){
+    .index{
+        opacity: 90%;
+        left:10px;
+        margin:40px;
+        max-width: 20rem;
+        padding: 2.5em;
+        margin-left:0pc;
+        margin-top: 10pc;
+    }
+    .facility{
+        padding:0.2pc;
+        font-size: 1rem;
+    }
+    .header{
+        padding: 40px;
+    }
+}
 
 .container {
     height: 100%;
@@ -109,7 +106,7 @@ body {
     position: relative;
 }
 
-.content h1 {
+.content h2 {
     align-items: center;
     font-size: x-large;
     color: #152b71;
@@ -117,7 +114,7 @@ body {
 }
 
 .content p {
-    color: black;
+    color: #152b71;
     font-size: medium;
      width: 900px;
 }
@@ -127,18 +124,63 @@ body {
     border-radius: 5px;
     font-size: 15px;
     height: 65px;
-    width: 250px;
+    width: 300px;
     margin-right: 90%;
     margin-top: 15px;
-    background-color: #a0a6bb;
+    background-color: #fcbc47;
     color: burlywood;
 }
 
 .btn:hover {
-    font-size: 16px;
+    font-size: 15px;
     border-radius: 20px;
     color: #152b71;
-    background-color: blanchedalmond;
+    background-color: rgb(200, 197, 216);
     transition: 0.4s ease-in-out;
     transform: scale(1.1);
+}
+   
+
+
+/* Media Queries for Responsive Adjustments */
+@media (max-width: 768px) {
+
+    .index {
+        width: 95%; /* Slightly reduce width for better fit */
+        top: 120px; /* Adjust positioning */
+    }
+
+    .container {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .outer {
+        width: 95%; /* Ensure it fits within smaller screens */
+        margin-top: 10px;
+    }
+
+    .btn {
+        width: 100%; /* Make buttons full-width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+   
+
+    .index {
+        width: 90%;
+        top: 100px; /* Lower top position for better alignment */
+    }
+
+    .outer {
+        width: 100%; /* Use full width */
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Slightly reduce button font size */
+    }
+
+    .content h2 {
+        font-size: 1.2rem; /* Slightly reduce font size */
+    }
 }
