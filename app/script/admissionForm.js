@@ -16,7 +16,7 @@ const guardianContact = document.getElementById('guardian-contact');
 const guardianRelation = document.getElementById('guardian-relation');
 
 
-document.querySelector('button[type="submit"]').addEventListener('submit', async (e)=>{
+document.querySelector('button[type="submit"]').addEventListener('click', async (e)=>{
     e.preventDefault();
     console.log("hi")
     let selectedGender

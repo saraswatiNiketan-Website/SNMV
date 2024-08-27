@@ -9,6 +9,7 @@ flex-wrap: wrap;
 .bg{
    height: 100%;
    width:100%;
+   display: none;
 }
 .content{
    width:100%;
@@ -33,7 +34,7 @@ a{
 
 .images{
   display: block;
-  margin-top:10%;
+  margin-top:0;
   /* border: 2rem; */
   width: 60%;
   align-items: center;
@@ -46,6 +47,7 @@ a{
    font-family: sans-serif;
    color:rgb(8, 4, 56);
    text-align: center;
+   margin: 0;
 }
 p{
    font-size:20px;
