@@ -1,3 +1,4 @@
+
 .menu-container {
     position: fixed;
     top: 1rem;
@@ -19,6 +20,7 @@
 }
 
 .menu-btn {
+    overflow: hidden;
     width: 35px;
     height: 35px;
     display: flex;
@@ -159,6 +161,7 @@
 }
 
 .bell {
+    overflow: hidden;
     width: 35px;
     height: 35px;
     display: flex;
